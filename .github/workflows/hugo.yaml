@@ -36,10 +36,6 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - uses: depot/setup-action@v1
-      - uses: depot/build-push-action@v1
-        with:
-          project: pnr44p42qd
-          context: .
       - name: Install Hugo CLI
         run: |
           wget -O ${{ runner.temp }}/hugo.deb https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_linux-amd64.deb \
